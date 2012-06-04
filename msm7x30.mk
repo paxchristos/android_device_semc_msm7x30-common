@@ -38,11 +38,12 @@ PRODUCT_COPY_FILES += \
 
 
 PRODUCT_COPY_FILES += \
+    device/semc/msm7x30-common/prebuilt/fillers:root/filler \
+    device/semc/msm7x30-common/prebuilt/10hostapconf:system/etc/init.d/10hostapconf \
     device/semc/msm7x30-common/prebuilt/ueventd.semc.rc:root/ueventd.semc.rc \
     device/semc/msm7x30-common/prebuilt/gps.conf:system/etc/gps.conf \
     device/semc/msm7x30-common/prebuilt/fstab:root/fstab \
     device/semc/msm7x30-common/prebuilt/bootrec:root/sbin/bootrec
-#    device/semc/msm7x30-common/prebuilt/filler:root/filler
 
 
 #recovery resources
@@ -119,7 +120,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.gprsclass=10 \
     ro.ril.def.agps.mode=2 \
     ro.ril.def.agps.feature=1 \
-    ro.telephony.default_network=0 \
+    ro.telephony.default_network=4 \
     ro.telephony.call_ring.multiple=false \
     ro.telephony.ril_class=SemcRIL \
     ro.ril.disable.power.collapse=0 \
@@ -138,7 +139,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.compbypass.enable=1 \
     dev.pm.dyn_samplingrate=1 \
     com.qc.hardware=true \
-    com.qc.hdmi_out=true \
+    com.qc.hdmi_out=false \
     BUILD_UTC_DATE=0 \
     hwui.render_dirty_regions=false \
     hwui.disable_vsync=true \
