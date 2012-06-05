@@ -112,37 +112,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=131072 \
-    rild.libpath=/system/lib/libril-qc-1.so \
-    rild.libargs=-d/dev/smd0 \
-    ro.ril.hsxpa=1 \
-    ro.ril.gprsclass=10 \
-    ro.ril.def.agps.mode=2 \
-    ro.ril.def.agps.feature=1 \
-    ro.telephony.default_network=4 \
-    ro.telephony.call_ring.multiple=false \
-    ro.telephony.ril_class=SemcRIL \
-    ro.ril.disable.power.collapse=0 \
-    ro.ril.fast.dormancy.timeout=3 \
-    ro.ril.enable.sbm.feature=1 \
-    pm.sleep_mode=1 \
-    wifi.supplicant_scan_interval=15 \
-    keyguard.no_require_sim=true \
-    ro.com.google.locationfeatures=1 \
-    ro.product.locale.language=en \
-    ro.product.locale.region=US \
-    persist.ro.ril.sms_sync_sending=1 \
-    ro.use_data_netmgrd=true \
-    debug.sf.hw=1 \
-    debug.composition.type=dyn \
-    ro.sf.compbypass.enable=1 \
-    dev.pm.dyn_samplingrate=1 \
-    com.qc.hardware=true \
-    com.qc.hdmi_out=false \
-    BUILD_UTC_DATE=0 \
-    hwui.render_dirty_regions=false \
-    hwui.disable_vsync=true \
-    persist.sys.usb.config=mass_storage
 
 
