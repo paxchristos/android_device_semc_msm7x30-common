@@ -69,29 +69,31 @@ PRODUCT_COPY_FILES += \
     bootable/recovery/res/images/progress_empty.png:root/res/images/progress_empty.png \
     bootable/recovery/res/images/progress_fill.png:root/res/images/progress_fill.png
 
+##From FXP
+#Audio
+PRODUCT_PACKAGES += \
+	audio.a2dp.default \
+	audio.primary.msm7x30 \
+	audio_policy.msm7x30 \
+	libaudioutils
+
+#Gralloc
 PRODUCT_PACKAGES += \
     gralloc.msm7x30 \
     copybit.msm7x30 \
     hwcomposer.msm7x30 \
-    audio.primary.msm7x30 \
-    audio_policy.msm7x30 \
-    gps.semc \
-    lights.semc \
-    camera.semc \
-    sensors.semc \
     libgenlock \
     libQcomUI \
     libtilerenderer \
     libmemalloc \
     liboverlay \
-    librs_jni \
-    Superuser \
-    su \
-    com.android.future.usb.accessory \
-    libcyanogen-dsp\
-    DSPManager \
-    CMSettings \
-    Gallery
+
+#Hal
+PRODUCT_PACKAGES += \
+	 gps.semc \
+ 	 lights.semc \
+ 	 camera.semc \
+ 	 sensors.semc
 
 # QCOM OMX
 PRODUCT_PACKAGES += \
@@ -102,15 +104,23 @@ PRODUCT_PACKAGES += \
     libmm-omxcore \
     libdivxdrmdecrypt
 
-#Torch
+#misc
 PRODUCT_PACKAGES += \
-    Torch
+	Torch \
+	librs_jni \
+	Superuser \
+	su \
+	com.android.future.usb.accessory \
+	libcyanogen-dsp\
+	DSPManager \
+	CMSettings \
+	Gallery \
+	com.android.future.usb.acessories
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.tethering.kb_disconnect=1
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
-
 
 
