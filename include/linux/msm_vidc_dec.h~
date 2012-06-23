@@ -195,6 +195,9 @@ struct vdec_ioctl_msg {
 #define VDEC_IOCTL_SET_IDR_ONLY_DECODING \
 	_IO(VDEC_IOCTL_MAGIC, 33)
 
+#define VDEC_IOCTL_SET_CONT_ON_RECONFIG  \
+	_IO(VDEC_IOCTL_MAGIC, 34)
+
 #define VDEC_IOCTL_SET_DISABLE_DMX \
 	_IOW(VDEC_IOCTL_MAGIC, 35, struct vdec_ioctl_msg)
 

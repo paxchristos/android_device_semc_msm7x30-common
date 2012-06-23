@@ -466,6 +466,7 @@ struct venc_allocatorproperty{
 };
 
 struct venc_bufferpayload{
+
 	size_t	sz;
 	int	fd;
 	unsigned int	offset;
